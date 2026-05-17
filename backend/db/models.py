@@ -9,3 +9,12 @@ class User:
     platform_id: str
     created_at: datetime
     last_login_at: datetime | None
+
+
+@dataclass
+class AuthCode:
+    id: int
+    platform_id: str
+    code: str
+    expires_at: datetime
+    is_used: bool
